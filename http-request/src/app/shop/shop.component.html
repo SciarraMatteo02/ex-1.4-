@@ -1,0 +1,15 @@
+<p>shop works!</p>
+<h2>Basic Request</h2>
+<button type="button" (click)="makeRequest()">Make Request</button>
+<div *ngIf="loading">loading...</div>
+<pre>{{data | json}}</pre>
+<button type="button" (click)="makeTypedRequest()">Make typed request</button>
+
+<!--Uso un ciclo for per scandire tutta la lista di articoli-->
+<div *ngFor="let product of productData">
+   <h3>{{product.product_name}}</h3>
+   <b>fornitore {{product.supplier}}</b>
+   <b>quantità {{product.quantity}}</b>
+   <b>prezzo unitario {{product.unit_price}}</b>
+   <hr>
+</div>
